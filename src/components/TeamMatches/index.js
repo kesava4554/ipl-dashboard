@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
+import PieChart from '../PieChart'
 
 import './index.css'
 
@@ -90,6 +91,7 @@ class TeamMatches extends Component {
         <img src={teamBannerURL} alt="team banner" className="team-banner" />
         <LatestMatch latestMatchData={latestMatch} />
         <h1 className="latest-match-heading mt-3">Team Statistics</h1>
+        <PieChart data={this.generatePieChartData()} />
         {this.renderRecentMatchesList()}
         <Link to="/">
           <button type="button" className="btn btn-outline-info mb-2">
